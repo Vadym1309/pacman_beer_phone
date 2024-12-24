@@ -1,0 +1,142 @@
+/* Загальні стилі для тіла сторінки */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+/* Контейнер для історії */
+.container {
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Заголовок */
+.title {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Стиль для тексту історії */
+.story {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+/* Стиль для кнопки */
+.start-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.4em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.start-button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Стиль для канваса гри */
+#gameCanvas {
+    display: block;
+    margin-top: 20px;
+    width: 100%;  /* Канвас займає всю ширину */
+    max-width: 800px;  /* Максимальна ширина для канваса */
+    height: 800px;  /* Висота канваса */
+    background-color: #e1e1e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Стиль для рахунку гри */
+#score {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Панель з кнопками управління */
+#controls {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#controls button {
+    width: 60px;
+    height: 60px;
+    background-color: #ff5733;
+    color: white;
+    font-size: 28px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Стиль кнопок при наведенні */
+#controls button:hover {
+    background-color: #ff4020;
+    transform: scale(1.1);
+}
+
+/* Стиль кнопок при натисканні */
+#controls button:active {
+    background-color: #e68a00;
+    transform: scale(0.95);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 4em;
+    }
+
+    .story {
+        font-size: 2.3em;
+    }
+
+    .start-button {
+        padding: 50px 70px;
+        font-size: 3em;
+    }
+
+   
+
+    #controls button {
+        width: 150px;
+        height: 150px;
+        font-size: 100px;
+    }
+}
